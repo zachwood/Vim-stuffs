@@ -1,3 +1,6 @@
+" Remove vi compatibility
+set nocompatible
+
 colorscheme Monokai 
 
 au BufNewFile,BufRead *.less set filetype=less
