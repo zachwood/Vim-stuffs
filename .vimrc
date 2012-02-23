@@ -1,10 +1,13 @@
 " Remove vi compatibility
 set nocompatible
 
-colorscheme Monokai 
+call pathogen#infect()
+
+colorscheme sunburst 
 
 au BufNewFile,BufRead *.less set filetype=less
 syntax on
+set nowrap "Turn off word wrapping
 set number
 set hidden
 set ignorecase
@@ -15,7 +18,18 @@ set ruler "Always show current position
 "set cmdheight=2 "The commandbar height
 set ignorecase "Ignore case when searching
 set smartcase
-set hlsearch "Highlight search things
+
+" Highlight search terms...
+set hlsearch
+set incsearch " ...dynamically as they are typed.
+
+"Maintain more context around the cursor
+set scrolloff=10
+set title
+
+" Scroll the viewport faster
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
 
 " Always hide the statusline
 "set laststatus=2
@@ -23,7 +37,18 @@ set hlsearch "Highlight search things
 " Format the statusline
 "set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
 
+" Allow Vim to manage multiple buffers effectively.
+set hidden
+
+" Boost the keyboard history from 20 to this
+set history=1000
+
+" Make file tab completion more useful
+set wildmenu
+set wildmode=list:longest
+
 " Enable filetype plugin
+filetype on
 filetype plugin on
 filetype indent on
 
@@ -44,7 +69,7 @@ set guioptions-=l " no scrollbar on the left
 set guioptions-=b " no scrollbar on the bottom
 set guioptions= 
 
-autocmd VimEnter * NERDTree
+"autocmd VimEnter * NERDTree
 "autocmd VimEnter * wincmd p
 
 " NERDTree
