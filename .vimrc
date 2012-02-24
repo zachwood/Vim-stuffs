@@ -19,6 +19,9 @@ set ruler "Always show current position
 set ignorecase "Ignore case when searching
 set smartcase
 
+" Ignore pyc files
+set wildignore+=*.pyc
+
 " Highlight search terms...
 set hlsearch
 set incsearch " ...dynamically as they are typed.

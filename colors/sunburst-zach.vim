@@ -33,7 +33,7 @@ hi link javascriptRegexpString  Regexp
 hi link javascriptNumber        Number
 hi link javascriptNull          Constant
 
-hi Normal       guifg=#f8f8f8 guibg=#111111:
+hi Normal       guifg=#EEEEEE guibg=#111111:
 hi Normal       ctermfg=253   ctermbg=0
 hi NonText      guifg=#666666 guibg=#000000
 hi NonText      ctermfg=241   ctermbg=0
