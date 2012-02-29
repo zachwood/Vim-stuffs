@@ -3,7 +3,7 @@ set nocompatible
 
 call pathogen#infect()
 
-colorscheme sunburst 
+colorscheme sunburst-zach
 
 au BufNewFile,BufRead *.less set filetype=less
 syntax on
@@ -15,7 +15,7 @@ set background=dark
 set ai
 set guifont=Menlo:h11
 set ruler "Always show current position
-"set cmdheight=2 "The commandbar height
+set cmdheight=3 "The commandbar height
 set ignorecase "Ignore case when searching
 set smartcase
 
@@ -35,7 +35,7 @@ nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
 " Always hide the statusline
-"set laststatus=2
+set laststatus=2
 
 " Format the statusline
 "set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
@@ -81,6 +81,13 @@ let NERDTreeIgnore=['\.pyc$', '\~$']
 
 " When vimrc is edited, reload it
 autocmd! bufwritepost vimrc source ~/.vimrc
+
+
+" Use OSX gestures to swap windows - this probably sucks
+if has('gui_macvim')
+  nnoremap <silent> <SwipeLeft> :macaction _cycleWindowsBackwards:<CR>
+  nnoremap <silent> <SwipeRight> :macaction _cycleWindows:<CR>
+endif
 
 " Disable arrow keys
 "nnoremap <up> <nop>

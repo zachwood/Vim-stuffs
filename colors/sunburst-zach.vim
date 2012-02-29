@@ -37,9 +37,9 @@ hi Normal       guifg=#EEEEEE guibg=#111111:
 hi Normal       ctermfg=253   ctermbg=0
 hi NonText      guifg=#666666 guibg=#000000
 hi NonText      ctermfg=241   ctermbg=0
-hi StatusLine   guifg=#ffffff guibg=#121212 gui=bold
+hi StatusLine   guifg=#121212 guibg=#ffffff gui=bold
 hi StatusLine   ctermfg=15    ctermbg=233   cterm=bold
-hi StatusLineNC guifg=#ffffff guibg=#121212
+hi StatusLineNC guifg=#000000 guibg=#666666
 hi StatusLineNC ctermfg=15    ctermbg=233
 hi Cursor       guifg=#000000 guibg=#a7a7a7
 hi Cursor       ctermfg=0     ctermbg=248
