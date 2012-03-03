@@ -1,7 +1,8 @@
 " Vim color scheme
 "
 " Name:   sunburst.vim
-" Author: Gigamo <gigamo@gmail.com>
+" Author: Gigamo <gigamo@gmail.com> Customized by Zach Wood
+" <me@zacharywood.com>
 "
 " Based on the Sunburst theme for TextMate
 " Distributable under the same terms as Vim itself
@@ -55,6 +56,7 @@ hi Todo         guifg=#fd5ff1 guibg=#000000 gui=italic,underline
 hi Todo         ctermfg=207   ctermbg=0     cterm=underline
 hi PreProc      guifg=#9b859d
 hi PreProc      ctermfg=246
+hi VertSplit    guifg=#000000 guibg=#333333
 hi Visual                     guibg=#242424
 hi Visual                     ctermbg=236
 hi VisualNOS                  guibg=#202020

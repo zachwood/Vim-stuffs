@@ -13,7 +13,7 @@ set hidden
 set ignorecase
 set background=dark
 set ai
-set guifont=Menlo:h11
+set guifont=Menlo:h12
 set ruler "Always show current position
 set cmdheight=3 "The commandbar height
 set ignorecase "Ignore case when searching
