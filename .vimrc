@@ -3,7 +3,9 @@ set nocompatible
 
 call pathogen#infect()
 
+"   Set color scheme + Font
 colorscheme sunburst-zach
+set guifont=Menlo:h12
 
 au BufNewFile,BufRead *.less set filetype=less
 syntax on
@@ -13,7 +15,6 @@ set hidden
 set ignorecase
 set background=dark
 set ai
-set guifont=Menlo:h12
 set ruler "Always show current position
 set cmdheight=3 "The commandbar height
 set ignorecase "Ignore case when searching
@@ -21,6 +22,8 @@ set smartcase
 
 " Ignore pyc files
 set wildignore+=*.pyc
+set wildignore+=*.git
+set wildignore+=*.svn
 
 " Highlight search terms...
 set hlsearch
@@ -58,9 +61,7 @@ filetype indent on
 " Save files when VIM loses focus
 :au FocusLost * silent! wa
 
-"
 " 4 spaces, current indent style
-"
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -82,12 +83,14 @@ let NERDTreeIgnore=['\.pyc$', '\~$']
 " When vimrc is edited, reload it
 autocmd! bufwritepost vimrc source ~/.vimrc
 
+" tell vim to keep a backup file
+set backup
 
-" Use OSX gestures to swap windows - this probably sucks
-if has('gui_macvim')
-  nnoremap <silent> <SwipeLeft> :macaction _cycleWindowsBackwards:<CR>
-  nnoremap <silent> <SwipeRight> :macaction _cycleWindows:<CR>
-endif
+" tell vim where to put its backup files
+set backupdir=~/.vim/tmp
+
+" tell vim where to put swap files
+set dir=~/.vim/tmp
 
 " Disable arrow keys
 "nnoremap <up> <nop>
