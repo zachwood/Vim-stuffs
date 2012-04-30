@@ -5,7 +5,7 @@ call pathogen#infect()
 
 "   Set color scheme + Font
 colorscheme sunburst-zach
-set guifont=Menlo:h12
+set guifont=Menlo:h11
 
 au BufNewFile,BufRead *.less set filetype=less
 syntax on
@@ -19,6 +19,9 @@ set ruler "Always show current position
 set cmdheight=3 "The commandbar height
 set ignorecase "Ignore case when searching
 set smartcase
+
+" Turn off matching parens highlighting
+let loaded_matchparen = 1
 
 " Ignore pyc files
 set wildignore+=*.pyc
@@ -68,7 +71,7 @@ set softtabstop=4
 set expandtab
 
 " get ride of scrollbar crap
-set guioptions-=r " no scrollbar on the right
+"set guioptions-=r " no scrollbar on the right
 set guioptions-=l " no scrollbar on the left
 set guioptions-=b " no scrollbar on the bottom
 set guioptions= 
@@ -91,6 +94,7 @@ set backupdir=~/.vim/tmp
 
 " tell vim where to put swap files
 set dir=~/.vim/tmp
+
 
 " Disable arrow keys
 "nnoremap <up> <nop>
